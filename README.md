@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TaxSafar Frontend 🚀
 
-## Getting Started
+TaxSafar is a premium, high-performance financial services platform for tax compliance, accounting, business advisory, and registration support. Built with modern web technologies, the platform delivers a fast, secure, and visually stunning experience across all devices.
 
-First, run the development server:
+## 🌟 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+* **Dynamic Service Engine:** Highly scalable Next.js `app/services/[serviceSlug]` dynamic routing rendering bespoke service detail layouts (`ServiceLayoutRenderer`).
+* **Advanced Theming System:** Custom Context API (`ThemeContext.tsx`) seamlessly enabling zero-flicker Light and Dark mode transitions utilizing Tailwind CSS v4 variants.
+* **Premium Aesthetics:** Integrated `framer-motion` for fluid micro-animations, glassmorphism overlays, and robust interactive elements.
+* **Component-First Architecture:** Organized with highly reusable layout templates (`ContentPageLayout`, `AuthLayout`) and unified branding assets (`TaxSafarLogo`).
+* **Authentication Suite:** Dedicated, polished interfaces for user login, user registration, and specialized partner portal access.
+* **SEO & Performance Optimized:** Leveraging Next.js App Router static site generation (SSG) alongside dynamic routing for absolute peak load speeds.
+
+## 🛠️ Technology Stack
+
+* **Framework:** [Next.js](https://nextjs.org/) (App Router, Turbopack)
+* **Library:** [React 19](https://react.dev/)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **Animations:** [Framer Motion](https://www.framer.com/motion/)
+* **Icons:** [Lucide React](https://lucide.dev/)
+
+## 📂 Project Structure
+
+```text
+├── app/
+│   ├── [slug]/                   # Dynamic generic info pages (About, Terms, FAQ, etc.)
+│   ├── services/
+│   │   └── [serviceSlug]/        # Dynamic bespoke service pages (GST, ITR, Virtual Office)
+│   ├── login/                    # User authentication
+│   ├── register/                 # Account creation
+│   ├── partner-login/            # Dedicated partner access
+│   ├── layout.tsx                # Root layout with ThemeProvider injection
+│   └── globals.css               # Global Tailwind directives & custom CSS variables
+│
+├── components/
+│   ├── Navbar.tsx                # Interactive primary navigation with ThemeToggle
+│   ├── Hero.tsx                  # Animated landing dashboard
+│   ├── ServiceGrid.tsx           # Categorized service grid
+│   ├── ServiceLayoutRenderer.tsx # Data-driven renderer for varied complex service blocks
+│   ├── AuthLayout.tsx            # Split-screen responsive auth wrapper
+│   └── Footer.tsx                # Multi-column dynamic sitemap footer
+│
+├── contexts/
+│   └── ThemeContext.tsx          # LocalStorage synced Light/Dark state provider
+│
+└── lib/
+    ├── servicesData.ts           # Centralized configuration mapping for dynamic services
+    └── utils.ts                  # Tailwind class-merging utilities (clsx, tailwind-merge)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+Make sure you have Node.js (v18 or higher) installed on your machine.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd taxsafar-frontend
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Start the development server (configured rapidly with Turbopack):
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-## Deploy on Vercel
+## 📦 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To build the application for production:
+```bash
+npm run build
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License & Ownership
+Copyright © **TaxSafar**. All rights reserved. Do not distribute or copy without explicit organizational authorization.
