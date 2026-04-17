@@ -6,11 +6,11 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
+    <section className="relative pt-32 pb-20 overflow-hidden dark:bg-slate-950 transition-colors duration-300">
       {/* Abstract Background Shapes */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10 bg-accent/30 overflow-hidden">
-        <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-full h-full -z-10 bg-accent/30 dark:bg-slate-900/20 overflow-hidden transition-colors duration-300">
+        <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary/5 dark:bg-secondary/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12 items-center">
@@ -20,43 +20,43 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-6"
         >
-          <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-primary/20 shadow-sm self-start">
+          <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-900 px-4 py-2 rounded-full border border-primary/20 dark:border-primary/40 shadow-sm self-start transition-colors duration-300">
             <span className="flex h-2 w-2 rounded-full bg-primary animate-ping"></span>
-            <span className="text-xs font-bold uppercase tracking-wider text-primary-dark">Trusted by 10,000+ Clients</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-primary-dark dark:text-primary">Trusted by 10,000+ Clients</span>
           </div>
 
-          <h1 className="text-5xl lg:text-7xl font-black leading-[1.1] text-slate-900 outfit tracking-tight">
-            Simplify Your <span className="text-primary italic">Finances</span>, Amplify Your <span className="text-secondary">Growth</span>.
+          <h1 className="text-5xl lg:text-7xl font-black leading-[1.1] text-slate-900 dark:text-white outfit tracking-tight transition-colors duration-300">
+            Simplify Your <span className="text-primary italic">Finances</span>, Amplify Your <span className="text-secondary dark:text-secondary-light">Growth</span>.
           </h1>
 
-          <p className="text-lg text-slate-600 max-w-lg leading-relaxed font-medium">
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed font-medium transition-colors duration-300">
             From seamless tax filing to complex financial advisory, TaxSafar is your destination for excellence in compliance and business management.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <Link 
               href="#services" 
-              className="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-xl shadow-primary/20 active:scale-95"
+              className="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-xl shadow-primary/20 dark:shadow-none active:scale-95"
             >
               Our Services
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
               href="/request-call" 
-              className="flex items-center justify-center bg-white border-2 border-slate-100 hover:border-primary/50 px-8 py-4 rounded-2xl font-black text-lg transition-all active:scale-95"
+              className="flex items-center justify-center bg-white dark:bg-slate-900 border-2 border-slate-100 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 text-slate-900 dark:text-white px-8 py-4 rounded-2xl font-black text-lg transition-all active:scale-95"
             >
               Request a Call Back
             </Link>
           </div>
 
           <div className="flex items-center gap-6 mt-6">
-            <div className="flex items-center gap-2 text-sm font-bold text-slate-500">
+            <div className="flex items-center gap-2 text-sm font-bold text-slate-500 dark:text-slate-400">
               <CheckCircle2 size={18} className="text-primary" /> Expert Led
             </div>
-            <div className="flex items-center gap-2 text-sm font-bold text-slate-500">
+            <div className="flex items-center gap-2 text-sm font-bold text-slate-500 dark:text-slate-400">
               <CheckCircle2 size={18} className="text-primary" /> 100% Secure
             </div>
-            <div className="flex items-center gap-2 text-sm font-bold text-slate-500">
+            <div className="flex items-center gap-2 text-sm font-bold text-slate-500 dark:text-slate-400">
               <CheckCircle2 size={18} className="text-primary" /> Fast Processing
             </div>
           </div>
@@ -69,22 +69,22 @@ export default function Hero() {
           className="relative hidden md:block"
         >
           {/* Glass Card Representation */}
-          <div className="w-full aspect-square bg-gradient-to-br from-white to-accent rounded-[3rem] shadow-2xl overflow-hidden border border-white/40 flex items-center justify-center relative">
-            <div className="absolute inset-4 border-2 border-dashed border-primary/20 rounded-[2.5rem]"></div>
+          <div className="w-full aspect-square bg-gradient-to-br from-white dark:from-slate-800 to-accent dark:to-slate-900 rounded-[3rem] shadow-2xl dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] overflow-hidden border border-white/40 dark:border-slate-700/50 flex items-center justify-center relative transition-colors duration-300">
+            <div className="absolute inset-4 border-2 border-dashed border-primary/20 dark:border-primary/10 rounded-[2.5rem]"></div>
             
             <div className="relative group cursor-pointer">
-               <div className="text-[12rem] font-black tracking-tighter text-slate-100 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none group-hover:scale-110 transition-transform">TAX</div>
+               <div className="text-[12rem] font-black tracking-tighter text-slate-100 dark:text-slate-800 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none group-hover:scale-110 transition-transform hidden sm:block">TAX</div>
                <div className="text-6xl font-black text-secondary relative z-10 drop-shadow-sm">TAX<span className="text-primary">safar</span></div>
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute top-1/4 left-1/4 h-24 w-24 bg-white/60 backdrop-blur shadow-xl rounded-2xl border border-white/40 flex items-center justify-center p-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                <div className="h-full w-full bg-primary/10 rounded-lg"></div>
+            <div className="absolute top-1/4 left-1/4 h-24 w-24 bg-white/60 dark:bg-slate-800/60 backdrop-blur shadow-xl rounded-2xl border border-white/40 dark:border-slate-700/50 flex items-center justify-center p-4 animate-bounce transition-colors duration-300" style={{ animationDuration: '3s' }}>
+                <div className="h-full w-full bg-primary/10 dark:bg-primary/20 rounded-lg"></div>
             </div>
-            <div className="absolute bottom-1/4 right-1/4 h-32 w-48 bg-white/60 backdrop-blur shadow-xl rounded-2xl border border-white/40 flex flex-col gap-2 p-4 animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>
-                <div className="h-3 w-3/4 bg-secondary/10 rounded-full"></div>
-                <div className="h-3 w-1/2 bg-primary/10 rounded-full"></div>
-                <div className="h-3 w-full bg-slate-100 rounded-full"></div>
+            <div className="absolute bottom-1/4 right-1/4 h-32 w-48 bg-white/60 dark:bg-slate-800/60 backdrop-blur shadow-xl rounded-2xl border border-white/40 dark:border-slate-700/50 flex flex-col gap-2 p-4 animate-bounce transition-colors duration-300" style={{ animationDuration: '4s', animationDelay: '1s' }}>
+                <div className="h-3 w-3/4 bg-secondary/10 dark:bg-secondary/20 rounded-full"></div>
+                <div className="h-3 w-1/2 bg-primary/10 dark:bg-primary/20 rounded-full"></div>
+                <div className="h-3 w-full bg-slate-100 dark:bg-slate-700 rounded-full"></div>
             </div>
           </div>
         </motion.div>

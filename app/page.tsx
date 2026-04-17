@@ -16,7 +16,7 @@ export default function Home() {
         <ServiceGrid />
 
         {/* CTA Section */}
-        <section className="py-20 bg-accent/30 relative overflow-hidden">
+        <section className="py-20 bg-accent/30 dark:bg-slate-900/10 relative overflow-hidden transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
             <div className="bg-primary rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-2xl shadow-primary/20">
               <div className="max-w-xl text-center lg:text-left">
@@ -34,19 +34,19 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-full max-w-md bg-white rounded-3xl p-8 shadow-xl">
+              <div className="w-full max-w-md bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-xl border border-transparent dark:border-slate-800 transition-colors duration-300">
                 <form className="flex flex-col gap-4">
                   <div>
-                    <label className="text-xs font-black uppercase tracking-wider text-slate-400 mb-1 block">Full Name</label>
-                    <input type="text" placeholder="John Doe" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium" />
+                    <label className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1 block">Full Name</label>
+                    <input type="text" placeholder="John Doe" className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium dark:text-white" />
                   </div>
                   <div>
-                    <label className="text-xs font-black uppercase tracking-wider text-slate-400 mb-1 block">Phone Number</label>
-                    <input type="tel" placeholder="+91 00000 00000" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium" />
+                    <label className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1 block">Phone Number</label>
+                    <input type="tel" placeholder="+91 00000 00000" className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium dark:text-white" />
                   </div>
                   <div>
-                    <label className="text-xs font-black uppercase tracking-wider text-slate-400 mb-1 block">Service Required</label>
-                    <select className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium appearance-none">
+                    <label className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1 block">Service Required</label>
+                    <select className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium appearance-none dark:text-white">
                       <option>Select a service</option>
                       <option>Return Filing</option>
                       <option>GST Registration</option>
@@ -54,7 +54,7 @@ export default function Home() {
                       <option>Other</option>
                     </select>
                   </div>
-                  <button className="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-xl font-black text-lg shadow-lg shadow-primary/20 transition-all active:scale-95 mt-2">
+                  <button className="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-xl font-black text-lg shadow-lg shadow-primary/20 dark:shadow-none transition-all active:scale-95 mt-2">
                     Submit Request
                   </button>
                 </form>
@@ -67,11 +67,11 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="text-center mb-16">
               <h2 className="text-sm font-black uppercase tracking-widest text-primary mb-3">Why TaxSafar</h2>
-              <h3 className="text-4xl md:text-5xl font-black text-slate-900 outfit">
+              <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white outfit">
                 Built on Trust & <span className="text-secondary text-gradient">Expertise</span>
               </h3>
             </div>
@@ -82,10 +82,10 @@ export default function Home() {
                 { title: "Digitally Secure", desc: "We use bank-grade encryption to ensure your sensitive financial data is always protected.", icon: "🔐" },
                 { title: "Client First", desc: "We tailor our services to your specific business needs, ensuring maximum value and minimal stress.", icon: "🤝" }
               ].map((feature, i) => (
-                <div key={i} className="flex flex-col items-center text-center p-8 rounded-3xl hover:bg-accent/20 transition-colors">
+                <div key={i} className="flex flex-col items-center text-center p-8 rounded-3xl hover:bg-accent/20 dark:hover:bg-slate-900 transition-colors">
                   <div className="text-5xl mb-6">{feature.icon}</div>
-                  <h4 className="text-2xl font-black text-slate-900 mb-4 outfit">{feature.title}</h4>
-                  <p className="text-slate-600 font-medium leading-relaxed">{feature.desc}</p>
+                  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 outfit">{feature.title}</h4>
+                  <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">{feature.desc}</p>
                 </div>
               ))}
             </div>

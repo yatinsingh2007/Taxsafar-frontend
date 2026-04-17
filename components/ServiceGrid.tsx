@@ -65,13 +65,13 @@ const services = [
 
 export default function ServiceGrid() {
   return (
-    <section id="services" className="py-24 bg-white relative">
+    <section id="services" className="py-24 bg-white dark:bg-slate-950 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-sm font-black uppercase tracking-widest text-primary mb-3">What We Offer</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-slate-900 outfit">
-              Comprehensive <span className="text-secondary">Solutions</span> for Your Business Needs
+            <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white outfit transition-colors duration-300">
+              Comprehensive <span className="text-secondary dark:text-secondary-light">Solutions</span> for Your Business Needs
             </h3>
           </div>
           <Link href="/services" className="text-lg font-bold text-primary hover:text-primary-dark transition-colors flex items-center gap-2 group">
@@ -87,15 +87,15 @@ export default function ServiceGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-8 rounded-[2rem] bg-slate-50 border border-slate-100 hover:border-primary/20 hover:bg-white hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 flex flex-col items-start"
+              className="group p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary/20 dark:hover:border-primary/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 flex flex-col items-start"
             >
               <div className={`p-4 rounded-2xl ${service.color} text-white mb-6 group-hover:scale-110 shadow-lg transition-transform`}>
                 <service.icon size={28} />
               </div>
-              <h4 className="text-xl font-black text-slate-900 mb-3 outfit leading-tight group-hover:text-primary transition-colors">
+              <h4 className="text-xl font-black text-slate-900 dark:text-white mb-3 outfit leading-tight group-hover:text-primary dark:group-hover:text-primary-dark transition-colors">
                 {service.title}
               </h4>
-              <p className="text-slate-600 mb-6 text-sm leading-relaxed font-medium">
+              <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed font-medium transition-colors">
                 {service.description}
               </p>
               <Link 
