@@ -35,8 +35,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         ? "dark"
         : "light";
       root.classList.add(systemTheme);
+      if (systemTheme === "light"){
+        document.body.style.backgroundColor = "#ffffff";
+      }else{
+        document.body.style.backgroundColor = "#020617";
+      }
     } else {
       root.classList.add(theme);
+      if (theme === "light"){
+        document.body.style.backgroundColor = "#ffffff";
+      }else{
+        document.body.style.backgroundColor = "#020617";
+      }
     }
 
     localStorage.setItem("taxsafar-theme", theme);
