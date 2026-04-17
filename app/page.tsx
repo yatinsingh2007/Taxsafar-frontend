@@ -16,15 +16,15 @@ export default function Home() {
         <ServiceGrid />
 
         {/* CTA Section */}
-        <section className="py-20 bg-accent/30 dark:bg-slate-900/10 relative overflow-hidden transition-colors duration-300">
+        <section className="py-20 bg-accent/30 dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-            <div className="bg-primary rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-2xl shadow-primary/20">
+            <div className="bg-primary dark:bg-[#0f172a] rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-2xl shadow-primary/20 dark:shadow-none transition-colors duration-300">
               <div className="max-w-xl text-center lg:text-left">
                 <h2 className="text-3xl md:text-5xl font-black text-white outfit mb-6 leading-tight">
                   Need Expert Guidance? <br />
-                  <span className="text-secondary">Request a Call Back</span> Today.
+                  <span className="text-secondary dark:text-[#0066FF]">Request a Call Back</span> Today.
                 </h2>
-                <p className="text-white/80 text-lg font-medium mb-8">
+                <p className="text-white/80 dark:text-slate-300 text-lg font-medium mb-8">
                   Our financial experts are ready to help you navigate through tax, compliance, and growth strategies. Let's build your success together.
                 </p>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-4">
@@ -34,19 +34,19 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-full max-w-md bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-xl border border-transparent dark:border-slate-800 transition-colors duration-300">
+              <div className="w-full max-w-md bg-white dark:bg-transparent rounded-3xl p-8 shadow-xl dark:shadow-none border border-transparent dark:border-slate-800 transition-colors duration-300">
                 <form className="flex flex-col gap-4">
                   <div>
                     <label className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1 block">Full Name</label>
-                    <input type="text" placeholder="John Doe" className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium dark:text-white" />
+                    <input type="text" placeholder="John Doe" className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#020617] border border-slate-100 dark:border-transparent focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium dark:text-white dark:placeholder:text-slate-600" />
                   </div>
                   <div>
                     <label className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1 block">Phone Number</label>
-                    <input type="tel" placeholder="+91 00000 00000" className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium dark:text-white" />
+                    <input type="tel" placeholder="+91 00000 00000" className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#020617] border border-slate-100 dark:border-transparent focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium dark:text-white dark:placeholder:text-slate-600" />
                   </div>
                   <div>
                     <label className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1 block">Service Required</label>
-                    <select className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium appearance-none dark:text-white">
+                    <select className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#020617] border border-slate-100 dark:border-transparent focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium appearance-none dark:text-white">
                       <option>Select a service</option>
                       <option>Return Filing</option>
                       <option>GST Registration</option>
